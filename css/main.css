@@ -99,6 +99,7 @@ textarea {
 html {
   background-color: #000000 ;
   height: 100%;
+	width: 100%;
 }
 
 body {
@@ -111,24 +112,48 @@ body {
 .wrapper {
   /*add display:flex and set justify-content to space-between*/
   display: flex;
-
-  
   justify-content: space-between;
+flex-flow: row wrap;
+	  /*Had to add flex-flow to the wrapper instead of the div's. For some reason it wouldn't work  */
 }
 
-.div-1, .div-2, .div-3 {
-  /*give the divs a width of 30%, add display:flex, set justify-content and align-items to center*/
-  color: #fff;
-  line-height: 1.5em;
-  font-size: 1.5em;
 
-  height: 300px;	 
-  width: 30%;
+
+header, main, footer{
+	width: 100%;
 	display: flex;
-	justify-content: center;
-	align-items: center;
+	align-items: center;	
+	padding: 0 0 0 20px;
+}
+
+ header{
+	color: #FFFFFF;
+	height: 200px;
+	width: 100%;
+	font-family:  "abril-fatface";
+	 font-size: 3em;
+	
+} 
+
+main h2{
+	 font-family: 'Source Sans Pro', sans-serif;
+	 font-weight: 400;
+	 font-size: 2em;
+}
 
 
+ main {
+	color: #FFFFFF;
+	height: 200px;
+	width: 100%;
+	
+	 margin-bottom: 20px;
+	 border-bottom: 1px solid #FFFFFF;
+} 
+
+.div-1 span{          /*why did aspirations go to another line and do I get it back with the rest of the text  */
+	font-weight: bold;
+	
 }
 
 .div-1, .div-2{
@@ -136,17 +161,36 @@ body {
 	border-width: thin;
 }
 
-.div-1 p {
-	padding: 0px 20px;	
+.div-1, .div-2, .div-3 {
+  /*give the divs a width of 30%, add display:flex, set justify-content and align-items to center*/
+  color: #fff;
+  line-height: 1.5em;
+  font-size: 1.4em;
+
+  height: 200px;
+  width: 30%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	padding: 0 20px;
+
+
+
 }
 
-.div-2 p{
-	padding-right: 20px;
+
+
+
+footer{
+	color: #FFFFFF;
+	font-size: 1.25em;
+	height: 100px;
+	width: 100%;
+	border-top: 1px solid #FFFFFF;
+	margin-top: 20px;
 }
-.div-3 p {
-	padding-right: 50px;
 	
-}
+
 /* ==========================================================================
    Helper classes
    ========================================================================== */
